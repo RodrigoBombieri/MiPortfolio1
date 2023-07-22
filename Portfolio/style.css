@@ -12,7 +12,7 @@
 }
 
 html{
-    height: 100%;
+   
     margin: 15px;
     border: 10px;
     padding: 10px;
@@ -24,7 +24,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    background-color: var(--background);
+    background-image: linear-gradient(rgb(223, 116, 137), rgb(115, 248, 248));
     margin: 0;
     height: 100vh;
 }
@@ -33,12 +33,17 @@ body{
 html,body{
     overflow-x: hidden; 
     color:black; 
-    font-family:'Opens Sans',helvetica;
+    font-family:'Monaco',helvetica;
     height:100%; 
     width:101%; 
     margin: 0px; 
     padding: 0px; 
 }
+
+p, a { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 19px; font-style: normal; 
+    font-variant: normal; font-weight: 700; line-height: 26.4px; }
+    p { font-family: monaco, Consolas, "Lucida Console", monospace; font-size: 19px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+
 
 header{
     padding: 15px 0s;
@@ -50,38 +55,87 @@ header{
     
 }
 
-header .container{
+header .cabecera{
     display: block;
     padding: 30px; 
+    margin: 20px;
 }
 
-header .container .logo{
-    width: 100px;
-}
 
 header img{
-    width: 100px;
+    width: 150px;
+
 }
 
-main .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+header img:hover{
+    transform: scale(1.1);
+    transition: all 0.1s;
+    background-color: aqua;
+    border-radius: 100%;
 }
 
-.welcome{
-    width: 300px;
+.container{
+    width: 1200px;
     height: 300px;
-    background-color: skyblue;
-    border: 2px solid black;
     margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.projects{  
-    width: 300px;
-    height: 300px;
-    background-color: skyblue;
-    border: 2px solid black;
+.welcome {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    border: 12px solid transparent;
+    margin: 5px;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow:#211F1F 0px 0px 10px 0px;
+
+}
+
+.welcome:hover{
+    transition: all 0.3s;
+    background-color: #f2f2f2;
+    border-radius: 24px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+
+    font-size: 1rem;
+    color:black;
+    background: rgba(255, 255, 255, .25);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+}
+
+.projects{
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    border: 12px solid transparent;
+    margin: 5px;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow:#211F1F 0px 0px 10px 0px;
+   
+}
+
+.projects:hover{
+ 
+    transition: all 0.3s;
+    background-color: #f2f2f2;
+    border-radius: 24px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+
+    font-size: 1rem;
+    color:black;
+    background: rgba(255, 255, 255, .25);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
 }
 
 
@@ -157,6 +211,8 @@ footer{
     position: absolute;
     bottom: 15px; 
     right: 15px;
+    margin: 10px;
+    padding: 20px;
 }
 
 .footer-social a{
@@ -169,6 +225,90 @@ footer .copy{
     float: right;
     padding: 5px;
     text-align: right;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+
+
+.welcome h1, h2 {
+  color: hsla(0, 0%, 0%, .9);
+  font: normal 30px Varela Round, sans-serif;
+  height: 30px;
+  left: 0;
+  letter-spacing: 5px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: auto;
+  width: 100%;
+  animation: move linear 2000ms infinite;  
+}
+
+
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  25% {    
+    text-shadow:      
+      -4px -4px 0 hsla(180, 100%, 50%, 1), 
+      -3px -3px 0 hsla(180, 100%, 50%, 1), 
+      -2px -2px 0 hsla(180, 100%, 50%, 1), 
+      -1px -1px 0 hsla(180, 100%, 50%, 1),
+      4px 4px 0 hsla(0, 100%, 50%, 1), 
+      3px 3px 0 hsla(0, 100%, 50%, 1), 
+      2px 2px 0 hsla(0, 100%, 50%, 1), 
+      1px 1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 hsla(0, 100%, 50%, 1), 
+      -3px 3px 0 hsla(0, 100%, 50%, 1), 
+      -2px 2px 0 hsla(0, 100%, 50%, 1), 
+      -1px 1px 0 hsla(0, 100%, 50%, 1),
+      4px -4px 0 hsla(180, 100%, 50%, 1), 
+      3px -3px 0 hsla(180, 100%, 50%, 1), 
+      2px -2px 0 hsla(180, 100%, 50%, 1), 
+      1px -1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 hsla(180, 100%, 50%, 1), 
+      3px 3px 0 hsla(180, 100%, 50%, 1), 
+      2px 2px 0 hsla(180, 100%, 50%, 1), 
+      1px 1px 0 hsla(180, 100%, 50%, 1),
+      -4px -4px 0 hsla(0, 100%, 50%, 1), 
+      -3px -3px 0 hsla(0, 100%, 50%, 1), 
+      -2px -2px 0 hsla(0, 100%, 50%, 1), 
+      -1px -1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }  
 }
 
 
